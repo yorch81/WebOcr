@@ -1,7 +1,7 @@
 package net.yorch.webocr;
 
 /**
- * App
+ * WebOcrApp
  * 
  * Application Class
  * 
@@ -19,19 +19,22 @@ package net.yorch.webocr;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * 
- * @category   App
+ * @category   WebOcrApp
  * @package    net.yorch.webocr
  * @copyright  Copyright 2015 JAPT
  * @license    http://www.apache.org/licenses/LICENSE-2.0
  * @version    1.0.0, 2015-24-02
  * @author     <a href="mailto:the.yorch@gmail.com">Jorge Alberto Ponce Turrubiates</a>
  */
-public class App {
-    public static void main( String[] args ) {
-        System.out.println("WebOcr Application !!!");
+public class WebOcrApp {
+
+	public static void main(String[] args) {
+		System.out.println("WebOcr Application !!!");
         
-        TessWrapper wrapper = new TessWrapper("C:/App/Tesseract-OCR/", "C:/TEMP/img/", "C:/TEMP/txt/");
+        TessWrapper wrapper = new TessWrapper("/usr/bin/", "/home/yorch/Downloads/img/", "/home/yorch/Downloads/txt/");
         
-        System.out.println(wrapper.tesseract("scanned"));
-    }
+        System.out.println(wrapper.tesseract("img"));
+
+	}
+
 }

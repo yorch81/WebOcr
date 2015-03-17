@@ -46,7 +46,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>net.yorch.webocr.App</mainClass>
+              <mainClass>net.yorch.webocr.WebOcrApp</mainClass>
             </manifest>
           </archive>
         </configuration>
