@@ -1,9 +1,9 @@
 package net.yorch.webocr;
 
 /**
- * WebOcrApp
+ * WebOcrApp<br>
  * 
- * Application Class
+ * Application Class<br><br>
  * 
  * Copyright 2015 Jorge Alberto Ponce Turrubiates
  *
@@ -19,10 +19,6 @@ package net.yorch.webocr;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * 
- * @category   WebOcrApp
- * @package    net.yorch.webocr
- * @copyright  Copyright 2015 JAPT
- * @license    http://www.apache.org/licenses/LICENSE-2.0
  * @version    1.0.0, 2015-24-02
  * @author     <a href="mailto:the.yorch@gmail.com">Jorge Alberto Ponce Turrubiates</a>
  */
