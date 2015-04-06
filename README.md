@@ -30,6 +30,8 @@ http://freemarker.org/
 
 https://code.google.com/p/tesseract-ocr/
 
+P.D. Let's go play !!!
+
 
 
 
