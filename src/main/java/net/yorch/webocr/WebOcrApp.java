@@ -29,7 +29,7 @@ public class WebOcrApp {
         
         TessWrapper wrapper = new TessWrapper("/usr/bin/", "/home/yorch/Downloads/img/", "/home/yorch/Downloads/txt/");
         
-        System.out.println(wrapper.tesseract("img"));
+        System.out.println(wrapper.tesseract("ocr"));
 
 	}
 
