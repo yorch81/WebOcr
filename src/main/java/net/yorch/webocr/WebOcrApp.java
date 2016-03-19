@@ -27,10 +27,11 @@ public class WebOcrApp {
 	public static void main(String[] args) {
 		System.out.println("WebOcr Application !!!");
         
-        TessWrapper wrapper = new TessWrapper("/usr/bin/", "/home/yorch/Downloads/img/", "/home/yorch/Downloads/txt/");
+        //TessWrapper wrapper = new TessWrapper("/usr/bin/", "/home/yorch/Downloads/img/", "/home/yorch/Downloads/txt/");
         
-        System.out.println(wrapper.tesseract("ocr"));
-
+        //System.out.println(wrapper.tesseract("ocr"));
+		
+		new WebApp();
 	}
 
 }
