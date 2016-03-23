@@ -1,7 +1,7 @@
 # WebOcr #
 
 ## Description ##
-Web implementation for Tesseract OCR
+Web wrapper implementation for Tesseract OCR
 
 ## Requirements ##
 * [Java](https://www.java.com/es/download/)
