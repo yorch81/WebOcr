@@ -2,6 +2,10 @@
 *.jar
 bin/
 target/
+tessdata/
 *~
 .*.sw*
+*.log
+.classpath
+.project
 webocr.properties
