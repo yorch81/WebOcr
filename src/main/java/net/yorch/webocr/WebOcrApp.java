@@ -39,7 +39,7 @@ public class WebOcrApp {
 		
 		//new WebApp();
 		
-		File imageFile = new File("/home/yorch/assets/img/numbers.jpg");
+		File imageFile = new File("C:/CODE/img/ocr2.png");
         ITesseract instance = new Tesseract();  // JNA Interface Mapping
         // ITesseract instance = new Tesseract1(); // JNA Direct Mapping
 
