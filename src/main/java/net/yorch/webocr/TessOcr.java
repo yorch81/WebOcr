@@ -32,21 +32,24 @@ public class TessOcr {
 	/**
 	 * Extract OCR Text of Image File
 	 * @param imageFile String Image Path
-	 * @return String
+	 * @return String OCR Text
 	 */
 	public static String ocr(String imageFile) {
 		String retValue = "";
 		
 		File image = new File(imageFile);
-        ITesseract instance = new Tesseract();  // JNA Interface Mapping
-        // ITesseract instance = new Tesseract1(); // JNA Direct Mapping
-
-        try {
-        	retValue = instance.doOCR(image);
-        } catch (TesseractException e) {
-            System.err.println(e.getMessage());
-        }
-        
+		
+		if (image.exists()) {
+			ITesseract instance = new Tesseract();  // JNA Interface Mapping
+	        // ITesseract instance = new Tesseract1(); // JNA Direct Mapping
+	        
+	        try {
+	        	retValue = instance.doOCR(image);
+	        } catch (TesseractException e) {
+	            System.err.println(e.getMessage());
+	        }
+		}
+		
 		return retValue;
 	}
 }
