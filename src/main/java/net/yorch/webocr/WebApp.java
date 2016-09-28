@@ -114,6 +114,7 @@ public class WebApp {
 	            
 	            return strlogin;*/
 	            
+	        	/*
 	            Twitter twitter = TwitterFactory.getSingleton();
 	            twitter.setOAuthConsumer("rj990vv20WAwBriRtirBhMSzp", "n2INiuJpV9uAioHKxTfANeJ4JDdq2ZIogH5FUwGocFVJsp0avn");
 	            
@@ -128,9 +129,9 @@ public class WebApp {
 				} catch (TwitterException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
+				}*/
 	            
-	            return "";
+	            return "WebOCR !!!";
 	        }
 	    });
 		
@@ -188,6 +189,7 @@ public class WebApp {
 		
 		/**
 	     * Subir Archivo
+	     * Example:  curl -F "webcam=@/home/yorch/tmp/mory.jpg" http://localhost:8080/upload
 	     */	
 		post("/upload", new Route() {
 	        @Override
@@ -195,6 +197,7 @@ public class WebApp {
 	        	MultipartConfigElement multipartConfigElement = new MultipartConfigElement("/home/yorch/tmp/");
 	        	
 	        	request.raw().setAttribute("org.eclipse.multipartConfig", multipartConfigElement);
+	        	String retResponse = "";
 	        	
 	        	try {
 					Part file = request.raw().getPart("webcam");
@@ -202,12 +205,15 @@ public class WebApp {
 					//String fileName = file.getName();
 					
 					file.write("yorch.jpg");
+					
+					retResponse = TessOcr.ocr("/home/yorch/tmp/yorch.jpg");
+					
 				} catch (IOException | ServletException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 	        	   
-	            return "upload";
+	            return retResponse;
 	        }
 	    });
 	}
