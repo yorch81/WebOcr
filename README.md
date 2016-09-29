@@ -1,7 +1,7 @@
-# WebOcr #
+# WebOCR #
 
 ## Description ##
-Web wrapper implementation for Tesseract OCR
+Web implementation for Tesseract OCR
 
 ## Requirements ##
 * [Java](https://www.java.com/es/download/)
@@ -9,7 +9,7 @@ Web wrapper implementation for Tesseract OCR
 * [FreeMarker](http://freemarker.org/)
 * [JQuery](http://jquery.com/)
 * [Bootstrap](http://getbootstrap.com/)
-* [Tesseract OCR](https://code.google.com/p/tesseract-ocr/)
+* [Tess4j](http://tess4j.sourceforge.net/)
 
 ## Developer Documentation ##
 JavaDoc.
@@ -21,8 +21,9 @@ Create configuration file with the next structure:
 externalDir=/dir/
 
 ## Notes ##
-install and configure Tesseract OCR, in Windows add to Environment Variable PATH.
-
+Creates Environment Variable JAVA_TOOL_OPTIONS:
+	export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+	
 ## References ##
 http://www.sparkjava.com/
 
