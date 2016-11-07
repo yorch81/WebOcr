@@ -23,6 +23,7 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 import spark.Spark;
+import static spark.Spark.setIpAddress;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
@@ -67,10 +68,15 @@ public class WebApp {
         
 		final Facebook facebook = new FacebookFactory(configuration).getInstance();
     	
+    	final String IP_ADDRESS = System.getenv("OPENSHIFT_DIY_IP") != null ? System.getenv("OPENSHIFT_DIY_IP") : "localhost";
+    	final int PORT = System.getenv("OPENSHIFT_DIY_PORT") != null ? Integer.parseInt(System.getenv("OPENSHIFT_DIY_PORT")) : 8080;
+
+    	setIpAddress(IP_ADDRESS);
+
 		/**
 	     * Port Applicacion
 	     */		
-		setPort(8080);
+		setPort(PORT);
 		
 		/**
 	     * Public Files Path
@@ -131,7 +137,7 @@ public class WebApp {
 					e.printStackTrace();
 				}*/
 	            
-	            return "WebOCR !!!";
+	            return "WebOCR on Openshift !!!";
 	        }
 	    });
 		
