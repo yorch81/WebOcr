@@ -6,28 +6,41 @@ Web implementation for Tesseract OCR
 ## Requirements ##
 * [Java](https://www.java.com/es/download/)
 * [Spark](http://www.sparkjava.com/)
-* [FreeMarker](http://freemarker.org/)
-* [JQuery](http://jquery.com/)
-* [Bootstrap](http://getbootstrap.com/)
 * [Tess4j](http://tess4j.sourceforge.net/)
 
+## Build ##
+Execute
+~~~
+mvn package
+~~~
+
 ## Developer Documentation ##
-JavaDoc.
+Execute
+~~~
+mvn javadoc:javadoc
+~~~
+
+## Testing ##
+With cURL
+~~~
+curl -F "image=@C:/path/to/images/ocr.png" http://localhost/extract
+~~~
+
+With browser open
+~~~
+http://localhost/test
+~~~
 
 ## Installation ##
 Generate and execute jar.
 
-Create configuration file with the next structure:
-externalDir=/dir/
+Download training eng.traineddata on tessdata directory
 
 ## Notes ##
-Creates Environment Variable JAVA_TOOL_OPTIONS:
-	export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+The default port is 80, but you can change it if create an environment variable named OCR_PORT.
 	
 ## References ##
 http://www.sparkjava.com/
-
-http://freemarker.org/
 
 https://code.google.com/p/tesseract-ocr/
 

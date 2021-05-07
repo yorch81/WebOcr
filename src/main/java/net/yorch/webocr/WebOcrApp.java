@@ -25,15 +25,22 @@ package net.yorch.webocr;
 public class WebOcrApp {
 
 	public static void main(String[] args) {
-		System.out.println("WebOcr Application !!!");
-        
+		String sPort = System.getenv("OCR_PORT");
+		
+		if (sPort == null)
+			sPort = "80";
+		
+		System.out.println("WebOcr is running on port " + sPort);
+		
+		WebApp web = new WebApp();
+		web.start(Integer.valueOf(sPort));
+		
         //TessWrapper wrapper = new TessWrapper("/usr/bin/", "/home/yorch/Downloads/img/", "/home/yorch/Downloads/txt/");
         
         //System.out.println(wrapper.tesseract("ocr"));
 		
 		// Create Environment Variable
 		// export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
-		new WebApp();
 	}
 
 }

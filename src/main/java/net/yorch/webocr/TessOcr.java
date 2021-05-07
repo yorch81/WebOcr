@@ -31,6 +31,7 @@ import net.sourceforge.tess4j.TesseractException;
 public class TessOcr {
 	/**
 	 * Extract OCR Text of Image File
+	 * 
 	 * @param imageFile String Image Path
 	 * @return String OCR Text
 	 */
@@ -43,6 +44,10 @@ public class TessOcr {
 			ITesseract instance = new Tesseract();  // JNA Interface Mapping
 	        // ITesseract instance = new Tesseract1(); // JNA Direct Mapping
 	        
+			String dataPath = Utils.getTessPath();
+			
+			instance.setDatapath(dataPath);
+			
 	        try {
 	        	retValue = instance.doOCR(image);
 	        } catch (TesseractException e) {

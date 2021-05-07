@@ -77,7 +77,7 @@
     <dependency>
       <groupId>com.sparkjava</groupId>
       <artifactId>spark-core</artifactId>
-      <version>2.2</version>
+      <version>2.9.3</version>
     </dependency>
     
     <dependency>
@@ -96,37 +96,29 @@
     </dependency>
     
     <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20140107</version>
+    </dependency>
+    
+    <dependency>
         <groupId>com.google.code.gson</groupId>
         <artifactId>gson</artifactId>
         <version>2.2.4</version>
     </dependency>
     
-    <!-- FreeMarker -->
+    <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
     <dependency>
-        <groupId>org.freemarker</groupId>
-        <artifactId>freemarker</artifactId>
-        <version>2.3.20</version>
+        <groupId>net.sourceforge.tess4j</groupId>
+        <artifactId>tess4j</artifactId>
+        <version>4.5.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sparkjava</groupId>
+      <artifactId>spark-core</artifactId>
+      <version>2.9.3</version>
     </dependency>
     
-    <!-- http://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
-    <dependency>
-      <groupId>net.sourceforge.tess4j</groupId>
-      <artifactId>tess4j</artifactId>
-      <version>3.1.0</version>
-    </dependency>
-
-    <!-- Facebook -->
-    <dependency>
-		  <groupId>org.facebook4j</groupId>
-		  <artifactId>facebook4j-core</artifactId>
-		  <version>2.3.0</version>
-	  </dependency>
-
-    <!-- Twitter -->
-    <dependency>
-		  <groupId>org.twitter4j</groupId>
-		  <artifactId>twitter4j-core</artifactId>
-		  <version>4.0.4</version>
-	  </dependency>
   </dependencies>
 </project>
