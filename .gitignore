@@ -2,7 +2,6 @@
 *.jar
 bin/
 target/
-tessdata/
 *~
 .*.sw*
 *.log

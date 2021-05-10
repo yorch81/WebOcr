@@ -5,7 +5,7 @@
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="var" path="M2_REPO/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="var" path="M2_REPO/com/sparkjava/spark-core/2.9.3/spark-core-2.9.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/sparkjava/spark-core/2.9.3/spark-core-2.9.3.jar" sourcepath="M2_REPO/com/sparkjava/spark-core/2.9.3/spark-core-2.9.3-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-server/9.4.31.v20200723/jetty-server-9.4.31.v20200723.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-http/9.4.31.v20200723/jetty-http-9.4.31.v20200723.jar"/>

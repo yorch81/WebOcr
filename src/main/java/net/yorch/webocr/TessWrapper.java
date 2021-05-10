@@ -116,6 +116,7 @@ public class TessWrapper {
 			try {
 				String currentLine = "";
 				
+				@SuppressWarnings("resource")
 				BufferedReader reader = new BufferedReader(new FileReader(txtFile));
 				
 				while ((currentLine = reader.readLine()) != null) {
