@@ -29,6 +29,8 @@ public class WebOcrApp {
 	 * @param args Not used
 	 */
 	public static void main(String[] args) {
+		Utils.checkOS();
+		
 		String sPort = System.getenv("OCR_PORT");
 		
 		if (sPort == null)
@@ -38,13 +40,6 @@ public class WebOcrApp {
 		
 		WebApp web = new WebApp();
 		web.start(Integer.valueOf(sPort));
-		
-        //TessWrapper wrapper = new TessWrapper("/usr/bin/", "/home/yorch/Downloads/img/", "/home/yorch/Downloads/txt/");
-        
-        //System.out.println(wrapper.tesseract("ocr"));
-		
-		// Create Environment Variable
-		// export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
 	}
 
 }

@@ -39,6 +39,9 @@ Download training eng.traineddata on tessdata directory
 ## Notes ##
 The default port is 80, but you can change it if create an environment variable named OCR_PORT.
 	
+## DockerHub ##
+https://hub.docker.com/r/yorch81/webocr
+
 ## References ##
 http://www.sparkjava.com/
 

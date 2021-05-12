@@ -90,7 +90,16 @@ public class WebApp {
 				
 				String ocrFile = tmp + fileName;
 			    
-				retOcr = TessOcr.ocr(ocrFile);
+				if (Utils.isWindows()) {
+					retOcr = TessOcr.ocr(ocrFile);
+				}
+				else {
+					// Create Environment Variable
+					// export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+					
+					TessWrapper wrapper = new TessWrapper("/usr/bin/", tmp, tmp);
+					retOcr = wrapper.tesseract(fileName);
+				}
 				
 				jRes.put("ERROR", 0);
 				jRes.put("OCR_TEXT", retOcr);

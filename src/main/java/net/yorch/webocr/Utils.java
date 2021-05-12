@@ -26,6 +26,28 @@ import java.io.File;
  */
 public class Utils {
 	/**
+	 * OS Flag
+	 */
+	private static boolean IS_WINDOWS = false;
+	
+	/**
+	 * Check Operating System
+	 */
+	public static void checkOS() {
+		if (System.getProperty("os.name").contains("Windows"))
+			Utils.IS_WINDOWS = true;
+	}
+	
+	/**
+	 * Validate if OS is Windows
+	 * 
+	 * @return boolean
+	 */
+	public static boolean isWindows() {
+		return Utils.IS_WINDOWS;
+	}
+	
+	/**
 	 * Gets tessdata path
 	 * 
 	 * @return tessdata path
@@ -33,12 +55,7 @@ public class Utils {
 	public static String getTessPath() {
 		File file = new File("");
 		String currentPath = file.getAbsolutePath();
-		String tessPath = "";
-		
-		if (System.getProperty("os.name").contains("Windows"))
-			tessPath = currentPath + "\\tessdata\\";
-		else
-			tessPath = currentPath + "/tessdata/";
+		String tessPath = currentPath + "\\tessdata\\";
 		
 		return tessPath;
 	}
@@ -51,7 +68,7 @@ public class Utils {
 	public static String getTempDir() {
 		String tmpDir = "";
 		
-		if (System.getProperty("os.name").contains("Windows"))
+		if (Utils.IS_WINDOWS)
 			tmpDir = System.getenv("TMP") + "\\";
 		else
 			tmpDir = "/tmp/";

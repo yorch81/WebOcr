@@ -76,7 +76,7 @@ public class TessWrapper {
 		command.append(" ");
 		command.append(imgdir);
 		command.append(filename);
-		command.append(".png ");
+		command.append(" ");
 		command.append(txtdir);
 		command.append(filename);
 		
@@ -88,6 +88,8 @@ public class TessWrapper {
 			aCommand = new String[]{"/bin/bash","-c",command.toString()};
 		
 		int status = 1;
+		
+		System.out.println(command.toString());
 		
 		try {
 			Process tessProc = Runtime.getRuntime().exec(aCommand);
